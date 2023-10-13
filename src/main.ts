@@ -6,9 +6,18 @@ const config: Phaser.Types.Core.GameConfig = {
   width: 640,
   height: 480,
   scene: [Menu, Play],
+  physics: {
+    default: "arcade",
+    arcade: {
+      gravity: {
+        x: 0,
+        y: 0,
+      },
+    },
+  },
 };
 
-document.title = "Rocket Patrol Remake";
+document.title = "Shade Prototype";
 document.body.style.backgroundColor = "beige";
 
 new Phaser.Game(config);
